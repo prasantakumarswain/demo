@@ -1,0 +1,12 @@
+<div id="post">
+  <%= render 'post' %>
+</div>
+<div style="display: none" id="post-form">
+  <%= form_tag "/posts/create_post", :method => "GET", :remote => true do |f|%>
+      <%= text_field_tag :name, params[:name], :placeholder => "name", :required => true %>
+      <%= text_field_tag :title, params[:title], :placeholder => "title", :required => true %>
+      <%= text_field_tag :content, params[:content], :placeholder => "content", :required => true %>
+      <%= submit_tag "create" %>
+  <% end %>
+</div>
+<button id="new-post" class="btn-primary">create</button>

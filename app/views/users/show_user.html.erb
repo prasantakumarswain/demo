@@ -1,0 +1,16 @@
+<p>
+  <b>Name:</b>
+  <%#= @user.name %>
+</p>
+
+<p>
+  <b>Regd NO:</b>
+  <%#= @user.regd_no %>
+</p>
+
+<p>
+  <b>address:</b>
+  <%#= @user.address %>
+</p>
+<%= link_to "edit",edit_user_user_path(@user) %>
+<%= link_to "back",all_user_users_path %>

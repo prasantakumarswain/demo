@@ -1,0 +1,23 @@
+<div align="center" style="border:1px solid #000;">
+<h1 style="border:1px dashed #000;">LIST OF ALL USERS</h1>
+<table style="border:1px solid #000; background:#fff;">
+<thead>
+	<tr>
+		<th>Name</th>
+		<th>Regd No</th>
+		<th>Address</th>
+		<th>Action</th>
+	</tr>
+</thead>
+<% @users.each do |user| %>
+	<tr>
+		<td><%= user.name %></td>
+		<td><%= user.regd_no %></td>
+		<td><%= user.address %></td>
+		<td><%= link_to "show", show_user_user_path(user)%>
+		<%= link_to "delete", delete_user_user_path(user), :method => "delete" %></td>
+	</tr>
+<% end %>
+</table>
+<%= link_to "add user", new_user_users_path %>
+</div>
